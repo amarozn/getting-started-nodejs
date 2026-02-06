@@ -1,4 +1,4 @@
-FROM node
+FROM node:25.6.0-bookworm
 
 ENV TINI_VERSION v0.18.0
 RUN arch=$(arch | sed s/aarch64/arm64/ | sed s/x86_64/amd64/) && echo $arch && wget https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${arch} -O /tini
